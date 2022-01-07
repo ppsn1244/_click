@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="example-1">
+        
+        <button v-on:click="counter += 10"class="btn ">👍</button>
+        <button v-on:click="counter += 20"class="btn ">❤</button>
+        <button v-on:click="plus(25)"class="btn ">🤣</button>
+        <button v-on:click="plus(30)"class="btn">🤩</button>
+        <button v-on:click="counter -= 15"class="btn" >😥</button>
+        <button v-on:click="counter -= 50"class="btn ">😡</button>
+        <button class ="btn btn-outline-dark" @click="counter = 0">reset</button>
+
+        <h1 @click="counter +=1">{{counter}} </h1>
+        
+        
+    </div>
+
+
+
+   
+</body>
+</html>
+
+<script>
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+          counter: 0,
+          status: false
+        },
+        methods:{
+            plus:function(i) {
+                this.counter+= i;
+            
+           
+            }
+
+        },
+      })
+
+
+</script>
